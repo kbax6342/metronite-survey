@@ -93,9 +93,9 @@
 
  $conn->query($sql);
 
-$sql = "SELECT user_id, names, email FROM mpage";
+// $sql = "SELECT user_id, names, email FROM mpage";
 
-$result = $conn->query($sql);
+// $result = $conn->query($sql);
  
 
 
@@ -111,9 +111,9 @@ $result = $conn->query($sql);
  header("location: index.php"); // Redirecting to first page.
  }
 
- $sql = "SELECT user_id, names, email,contact FROM mpage ORDER BY user_id DESC LIMIT 5";
+//  $sql = "SELECT user_id, names, email,contact FROM mpage ORDER BY user_id DESC LIMIT 5";
 
-$result = $conn->query($sql);
+// $result = $conn->query($sql);
  ?>
 
 <div class="bg-white  md:max-w-screen-lg w-full mx-auto mt-[30px] md:rounded-md p-5 flex  drop-shadow-2xl  h-[725px] blocko flex-col justify-between">
@@ -135,24 +135,24 @@ echo "<table  class='h-[100px] w-full robotox'>
 <th class='border-r pl-2'>Contact</th>
 ";
 // h-[550px]'>";
-if ($result->rowCount() > 0 ) {
-    // output data of each row
+// if ($result->rowCount() > 0 ) {
+//     // output data of each row
     
-    while($row = $result->fetch(PDO::FETCH_ASSOC)) {
-        echo "<tr class='border'>
-        <th class='border-r pl-2'>".$row['names']."</th>
-        <th  class='border-r pl-2'>".$row['email']."</th>
-        <th  class='border-r pl-2'>".$row['contact']."</th>
-    </tr>";
+//     while($row = $result->fetch(PDO::FETCH_ASSOC)) {
+//         echo "<tr class='border'>
+//         <th class='border-r pl-2'>".$row['names']."</th>
+//         <th  class='border-r pl-2'>".$row['email']."</th>
+//         <th  class='border-r pl-2'>".$row['contact']."</th>
+//     </tr>";
         
 
 
 
-    }
+//     }
 
-} else {
-    echo "0 results";
-}
+// } else {
+//     echo "0 results";
+// }
 
 
 echo "</table>";
